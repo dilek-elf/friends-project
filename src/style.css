@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* style.css — Friends Website */
+
+/* Logo font */
+.logo-font {
+  font-family: 'Pacifico', cursive;
+}
+
+/* Character card hover effect */
+.character-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Character image */
+.character-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Colored top bar on each card */
+.card-top {
+  height: 6px;
+  width: 100%;
+}
+
+.rachel   { background-color: #e8732a; }
+.monica   { background-color: #c0392b; }
+.phoebe   { background-color: #8e44ad; }
+.ross     { background-color: #2980b9; }
+.chandler { background-color: #27ae60; }
+.joey     { background-color: #f39c12; }
