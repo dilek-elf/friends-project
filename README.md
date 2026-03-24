@@ -23,6 +23,7 @@ CSS — minimal custom styles for hover effects, card color bars, and fonts
 Google Fonts — Pacifico font for the Friends logo
 
 📁 Project Structure
+
 friends-website/
 │
 ├── index.html       # Main HTML file with all sections
