@@ -3,8 +3,6 @@ A clean, responsive fan website dedicated to the Friends TV Show, built with HTM
 
 📸 Preview
 
-Add a screenshot of your website here
-
 <img width="1875" height="767" alt="image" src="https://github.com/user-attachments/assets/c2618a41-2ff5-47ad-a300-e2fc52c4f9d7" />
 
 ✨ Features
@@ -52,17 +50,3 @@ Building a responsive grid with sm: and lg: breakpoints
 Separating a small custom CSS file from Tailwind
 Centering elements using flexbox tricks
 Using Google Fonts in a project
-
-
-
-
-
-
-
-
-
-
-
-
-
-
