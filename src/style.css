@@ -1,31 +1,105 @@
 @import "tailwindcss";
 
-/* style.css — Friends Website */
+/* ============================================
+   style.css — Friends Fan Page
+   Optimized: Color System + Typography + A11y
+   ============================================ */
 
-/* Logo font */
-.logo-font {
-  font-family: 'Pacifico', cursive;
+/* ----------------------------
+   1. DESIGN TOKENS (CSS Variables)
+   Think of these like a "brand kit" — one place
+   to change a color and it updates everywhere.
+   ---------------------------- */
+:root {
+  /* Color palette */
+  --color-primary:      #d97706; /* amber-600 — main brand color */
+  --color-primary-dark: #92400e; /* amber-800 — for hover/contrast */
+  --color-accent:       #fef3c7; /* amber-100 — light backgrounds */
+  --color-surface:      #fffbeb; /* amber-50  — page background */
+  --color-text:         #374151; /* gray-700  — body text */
+  --color-text-muted:   #6b7280; /* gray-500  — secondary text */
+  --color-text-on-dark: #fef3c7; /* readable on amber-700 bg */
+
+  /* Typography scale */
+  --font-display: 'Pacifico', cursive;       /* headings/logo */
+  --font-body:    Georgia, 'Times New Roman', serif; /* readable body text */
+
+  /* Spacing & shape */
+  --radius-card: 1rem;
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Character card hover effect */
+/* ----------------------------
+   2. TYPOGRAPHY SYSTEM
+   Base font set once here — not scattered across HTML.
+   Georgia is easier to read than sans-serif for long text.
+   ---------------------------- */
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+
+  /* Improves readability — comfortable line spacing */
+  line-height: 1.6;
+}
+
+/* ----------------------------
+   3. FOCUS STYLES (Accessibility)
+   By default, browsers show an outline when you tab to a link.
+   Many devs remove it — that's bad! Keyboard users need it.
+   We make it visible and on-brand.
+   ---------------------------- */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ----------------------------
+   4. LOGO / DISPLAY FONT
+   ---------------------------- */
+.logo-font {
+  font-family: var(--font-display);
+}
+
+/* ----------------------------
+   5. CHARACTER CARDS
+   ---------------------------- */
 .character-card {
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* Ensures card content order makes sense when read by screen readers */
+  display: flex;
+  flex-direction: column;
 }
 
 .character-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-hover);
 }
 
-/* Character image */
+/* ----------------------------
+   6. CHARACTER IMAGE
+   object-position: top keeps the face visible (not cropped out)
+   ---------------------------- */
 .character-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   object-position: top;
+
+  /* Decorative images don't need alt text read aloud —
+     but character photos ARE meaningful, so alt text stays. */
 }
 
-/* Colored top bar on each card */
+/* ----------------------------
+   7. CARD TOP COLOR BARS
+   Each character gets a unique color — acts as a visual label.
+   aria-hidden is set in HTML since these are purely decorative.
+   ---------------------------- */
 .card-top {
   height: 6px;
   width: 100%;
@@ -37,3 +111,42 @@
 .ross     { background-color: #2980b9; }
 .chandler { background-color: #27ae60; }
 .joey     { background-color: #f39c12; }
+
+/* ----------------------------
+   8. SKIP LINK (Accessibility)
+   Lets keyboard users jump straight to main content.
+   Hidden visually until focused via Tab key.
+   ---------------------------- */
+.skip-link {
+  position: absolute;
+  top: -100px; /* hidden off-screen by default */
+  left: 1rem;
+  background: var(--color-primary-dark);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+/* When focused (user hits Tab), it appears */
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ----------------------------
+   9. REDUCED MOTION
+   Some users (e.g. with vestibular disorders) have
+   "reduce motion" turned on in their OS settings.
+   This respects that preference.
+   ---------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .character-card {
+    transition: none;
+  }
+
+  .character-card:hover {
+    transform: none;
+  }
+}

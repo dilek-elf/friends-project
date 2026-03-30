@@ -2,188 +2,338 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/src/style.css" >
-    <!-- Google Font-->
-     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport meta is required for responsive design & mobile accessibility -->
 
-    <title>Friends</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+
+    <!-- meta description helps screen readers and search engines understand the page -->
+    <meta name="description" content="A fan page celebrating the iconic TV show Friends (1994–2004), featuring character profiles, fun facts, and memorable quotes." />
+
+    <title>Friends — The Fan Page</title>
   </head>
-  
+
   <body class="bg-amber-50 text-gray-700">
 
-  <!--Navigation-->
-  <nav class="bg-amber-400 p-4 flex justify-between items-center shadow-md sticky top-0 z-50">
-     <div class="w-32"></div>
-    <h1 class="logo-font text-5xl text-white">Friends</h1>
-    <ul class="flex gap-6 text-white font-bold w-32 justify-end">
-      <li><a href="#about" class="hover:underline">About</a></li>
-      <li><a href="#characters" class="hover:underline">Characters</a></li>
-      <li><a href="#facts" class="hover:underline">Facts</a></li>
-    </ul>
-  </nav>
+    <!-- SKIP LINK: First thing in <body> so keyboard users can skip the nav -->
+    <!-- Without this, a keyboard user has to Tab through every nav link on every page load -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- hero section -->
-  <section class="text-center py-20 px-4 bg-amber-100">
-    <p class="text-amber-600 mb-4">1994 – 2004</p>
-    <h2 class="logo-font text-6xl text-amber-700 mb-4">The One About Everything</h2>
-    <p class="text-gray-800 text-lg max-w-xl mx-auto mt-8">
-      Six friends. Central Perk Café. One orange couch. Extra large coffee mugs. A whole lot of coffee — and a lifetime of memories.
-    </p>
-  </section>  
+    <!-- NAVIGATION
+         role="navigation" + aria-label tells screen readers:
+         "This is the site navigation, specifically the 'Main navigation'."
+         Without aria-label, if there are multiple <nav>s, they're indistinguishable. -->
+    <nav
+      role="navigation"
+      aria-label="Main navigation"
+      class="bg-amber-400 p-4 flex justify-between items-center shadow-xl sticky top-0 z-50"
+    >
+      <div class="w-32" aria-hidden="true"></div>
+      <!-- aria-hidden on decorative spacer — screen readers skip it -->
 
-  <!-- about-->
-  <section id="about" class="max-w-2xl mx-auto text-center py-14 px-4">
-    <p class="text-amber-600 text-lg mb-4">About the Show</p>
-    <h3 class="text-3xl font-bold text-amber-700 mb-4">Grab your coffee and meet the gang</h3>
-    <p class="text-gray-800 ">
-      <strong>Friends</strong> follows six inseparable friends living in New York City, hanging out at
-      <strong>Central Perk</strong> coffee shop and squeezing into their cozy Manhattan apartments.
-      Through love, breakups, job changes, and life's messiest moments, they always find their way back
-      to each other — and to that legendary orange couch. Packed with unforgettable moments, timeless humor,
-      and lines you'll be quoting for the rest of your life. So grab your coffee and welcome to the gang! ☕
-    </p>
-  </section>
+      <!-- This is a logo/site title — aria-label clarifies it's the site name -->
+      <a href="#" aria-label="Friends fan page — go to top" class="logo-font text-4xl text-amber-700 no-underline">
+        Friends
+      </a>
 
-  <!-- quotes from show -->
-  <div class="bg-amber-700 text-amber-300 text-center py-4 px-4 text-lg italic">
-    "We were on a break!"  -  "How you doin'?"  -  "Oh. My. God."  -  "Smelly Cat…"  -  "Joey doesn´t share food"
-  </div>
+      <!-- aria-label on <ul> groups these as "Site links" for screen readers -->
+      <ul class="flex flex-wrap justify-center gap-4 sm:gap-6 text-amber-700 font-bold text-sm sm:text-base list-none p-0" aria-label="Site sections">
+        <li><a href="#about"      class="hover:underline">About</a></li>
+        <li><a href="#characters" class="hover:underline">Characters</a></li>
+        <li><a href="#facts"      class="hover:underline">Facts</a></li>
+        <li>
+          <a
+            href="https://shop.warnerbros.co.uk/search?type=product%2Carticle%2Cpage%2Ccollection&options[prefix]=last&q=friends*"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Shop Friends merchandise — opens in new tab"
+            class="hover:underline"
+          >Shop</a>
+        </li>
+      </ul>
+    </nav>
 
-  <!-- characters -->
-  <section id="characters" class="py-16 px-4">
-    <p class="text-center text-amber-600 text-lg mb-4">The Gang</p>
-    <h3 class="text-center text-3xl font-bold text-amber-700 mb-10">Meet Your New Best Friends</h3>
+    <!-- MAIN CONTENT
+         <main> with id="main-content" is the skip-link target.
+         role="main" is redundant on <main> but added for older screen readers. -->
+    <main id="main-content" role="main">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <!-- HERO
+           <section> with aria-labelledby links the section to its heading.
+           Screen readers announce: "Hero section, The One About Everything" -->
+      <section aria-labelledby="hero-heading" class="text-center py-20 px-4 bg-amber-100">
+        <p class="text-amber-600 mb-4">
+          <!-- aria-label gives screen readers better context than just "1994 – 2004" -->
+          <time datetime="1994/2004" aria-label="Aired from 1994 to 2004">1994 – 2004</time>
+        </p>
+        <h1 id="hero-heading" class="logo-font text-6xl text-amber-700 mb-4">
+          The One About Everything
+        </h1>
+        <!-- Changed h2 → h1: there should only be ONE h1 per page (was in <nav> before — wrong) -->
+        <p class="text-gray-800 text-lg max-w-xl mx-auto mt-8">
+          Six friends. Central Perk Café. One orange couch. Extra large coffee mugs.
+          A whole lot of coffee — and a lifetime of memories.
+        </p>
+      </section>
 
-      <!-- Rachel -->
-      <div class="character-card bg-white rounded-2xl shadow-md overflow-hidden">
-        <div class="card-top rachel"></div>
-        <img src="./public/Rachel.png"
-             alt="Rachel Green" class="character-img"/>
-        <div class="p-4">
-          <p class="text-xs text-amber-500 uppercase tracking-wider">Jennifer Aniston</p>
-          <h4 class="text-xl font-bold text-gray-800 mt-1">Rachel Green</h4>
-          <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Fashionista</span>
-          <p class="text-gray-500 text-sm leading-relaxed">
-            She started as a runaway bride and became an independent, stylish New York woman. Her hair alone inspired a whole generation!
-          </p>
-        </div>
+      <!-- ABOUT SECTION -->
+      <section id="about" aria-labelledby="about-heading" class="max-w-2xl mx-auto text-center py-14 px-4">
+        <p class="text-amber-600 text-lg mb-4" aria-hidden="true">About the Show</p>
+        <!-- aria-hidden on decorative label — the heading below already covers this -->
+        <h2 id="about-heading" class="text-3xl font-bold text-amber-700 mb-4">
+          Grab your coffee and meet the gang
+        </h2>
+        <p class="text-gray-800">
+          <strong>Friends</strong> follows six inseparable friends living in New York City, hanging out at
+          <strong>Central Perk</strong> coffee shop and squeezing into their cozy Manhattan apartments.
+          Through love, breakups, job changes, and life's messiest moments, they always find their way back
+          to each other — and to that legendary orange couch. Packed with unforgettable moments, timeless humor,
+          and lines you'll be quoting for the rest of your life. So grab your coffee and welcome to the gang! ☕
+        </p>
+      </section>
+
+      <!-- quotes from the show
+           role="marquee" signals this is a scrolling/dynamic content region.
+           aria-label gives it a name. aria-live="off" prevents screen readers
+           from reading every scroll update (would be very annoying). -->
+      <div
+        role="marquee"
+        aria-label="Famous quotes from Friends"
+        aria-live="off"
+        class="bg-amber-700 text-amber-200 text-center py-5 px-4 text-lg italic"
+      >
+        "We were on a break!" — "How you doin'?" — "Oh. My. God." — "Smelly Cat…" —
+        "Joey doesn't share food" — "Pivot, Pivot, Pivot" —
+        "They don't know that we know they know we know" — "My sandwich" —
+        "I wanna quit the gym" — "See he's her Lobster" — "Red Ross"
       </div>
 
-      <!-- Monica -->
-      <div class="character-card bg-white rounded-2xl shadow-md overflow-hidden">
-        <div class="card-top monica"></div>
-        <img src="./public/Monica.png"
-             alt="Monica Geller" class="character-img"/>
-        <div class="p-4">
-          <p class="text-xs text-amber-500 uppercase tracking-wider">Courteney Cox</p>
-          <h4 class="text-xl font-bold text-gray-800 mt-1">Monica Geller</h4>
-          <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Chef</span>
-          <p class="text-gray-500 text-sm leading-relaxed">
-            Monica is the heart of the group — a passionate chef, obsessive cleaner, and fiercely competitive friend. Her apartment is basically the gang's HQ.
-          </p>
-        </div>
-      </div>
+      <!-- characters section
+           aria-labelledby connects section to its h2 for screen readers. -->
+      <section id="characters" aria-labelledby="characters-heading" class="py-14 px-4">
+        <p class="text-center text-amber-600 text-lg mb-4" aria-hidden="true">The Gang</p>
+        <h2 id="characters-heading" class="text-center text-3xl font-bold text-amber-700 mb-10">
+          Meet Your New Best Friends
+        </h2>
 
-      <!-- Phoebe -->
-      <div class="character-card bg-white rounded-2xl shadow-md overflow-hidden">
-        <div class="card-top phoebe"></div>
-        <img src="./public/Phoebe.png"
-             alt="Phoebe Buffay" class="character-img"/>
-        <div class="p-4">
-          <p class="text-xs text-amber-500 uppercase tracking-wider">Lisa Kudrow</p>
-          <h4 class="text-xl font-bold text-gray-800 mt-1">Phoebe Buffay</h4>
-          <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Free Spirit</span>
-          <p class="text-gray-500 text-sm leading-relaxed">
-            Quirky, warm, and wonderfully weird. A masseuse and singer-songwriter whose greatest hit is <em>Smelly Cat</em>. One of a kind — truly.
-          </p>
-        </div>
-      </div>
+        <!-- role="list" reinforces this is a list of items (some CSS resets break list semantics) -->
+        <ul
+          role="list"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-9 max-w-5xl mx-auto list-none p-0"
+        >
 
-      <!-- Ross -->
-      <div class="character-card bg-white rounded-2xl shadow-md overflow-hidden">
-        <div class="card-top ross"></div>
-        <img src="./public/ross.png"
-             alt="Ross Geller" class="character-img"/>
-        <div class="p-4">
-          <p class="text-xs text-amber-500 uppercase tracking-wider">David Schwimmer</p>
-          <h4 class="text-xl font-bold text-gray-800 mt-1">Ross Geller</h4>
-          <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Paleontologist</span>
-          <p class="text-gray-500 text-sm leading-relaxed">
-            A hopeless romantic with three divorces and a passion for dinosaurs. He's been in love with Rachel since high school. And yes — they were on a break.
-          </p>
-        </div>
-      </div>
+          <!-- RACHEL GREEN
+               role="article" = self-contained content item (like a blog card)
+               aria-label gives the card a meaningful name for screen readers -->
+          <li>
+            <article
+              role="article"
+              aria-label="Rachel Green — The Fashionista"
+              class="character-card bg-white rounded-2xl shadow-md overflow-hidden"
+            >
+              <!-- aria-hidden: decorative color bar, no info for screen readers -->
+              <div class="card-top rachel" aria-hidden="true"></div>
 
-      <!-- Chandler -->
-      <div class="character-card bg-white rounded-2xl shadow-md overflow-hidden">
-        <div class="card-top chandler"></div>
-        <img src="./public/Chandler.png"
-             alt="Chandler Bing" class="character-img"/>
-        <div class="p-4">
-          <p class="text-xs text-amber-500 uppercase tracking-wider">Matthew Perry</p>
-          <h4 class="text-xl font-bold text-gray-800 mt-1">Chandler Bing</h4>
-          <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Funny One</span>
-          <p class="text-gray-500 text-sm leading-relaxed">
-            Sarcasm is his love language. Could this BE a more loveable character? His job is a mystery to everyone, but his heart is wide open.
-          </p>
-        </div>
-      </div>
+              <img
+                src="./public/Rachel.png"
+                alt="Rachel Green, played by Jennifer Aniston, smiling confidently"
+                class="character-img"
+              />
+              <!-- Good alt text: who is it, who plays them, brief visual context -->
 
-      <!-- Joey -->
-      <div class="character-card bg-white rounded-2xl shadow-md overflow-hidden">
-        <div class="card-top joey"></div>
-        <img src="./public/Joey.png"
-             alt="Joey Tribbiani" class="character-img"/>
-        <div class="p-4">
-          <p class="text-xs text-amber-500 uppercase tracking-wider">Matt LeBlanc</p>
-          <h4 class="text-xl font-bold text-gray-800 mt-1">Joey Tribbiani</h4>
-          <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Actor</span>
-          <p class="text-gray-500 text-sm leading-relaxed">
-            Charming, loveable, and deeply committed to two things: acting and food. He has the biggest heart in the group — and he does NOT share food.
-          </p>
-        </div>
-      </div>
+              <div class="p-4">
+                <p class="text-xs text-amber-500 uppercase tracking-wider">Jennifer Aniston</p>
+                <h3 class="text-xl font-bold text-gray-800 mt-1">Rachel Green</h3>
+                <!-- h3 because we're inside a section with h2 — heading hierarchy matters! -->
+                <span
+                  class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3"
+                  aria-label="Character type: The Fashionista"
+                >
+                  The Fashionista
+                </span>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  She started as a runaway bride and became an independent, stylish New York woman.
+                  Her hair alone inspired a whole generation!
+                </p>
+              </div>
+            </article>
+          </li>
 
-    </div>
-  </section>
+          <!-- MONICA GELLER -->
+          <li>
+            <article
+              role="article"
+              aria-label="Monica Geller — The Chef"
+              class="character-card bg-white rounded-2xl shadow-md overflow-hidden"
+            >
+              <div class="card-top monica" aria-hidden="true"></div>
+              <img
+                src="./public/Monica.png"
+                alt="Monica Geller, played by Courteney Cox, smiling warmly"
+                class="character-img"
+              />
+              <div class="p-4">
+                <p class="text-xs text-amber-500 uppercase tracking-wider">Courteney Cox</p>
+                <h3 class="text-xl font-bold text-gray-800 mt-1">Monica Geller</h3>
+                <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Chef</span>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  Monica is the heart of the group — a passionate chef, obsessive cleaner, and fiercely
+                  competitive friend. Her apartment is basically the gang's HQ.
+                </p>
+              </div>
+            </article>
+          </li>
 
-  <!--facts-->
-  <section id="facts" class="bg-amber-700 text-white text-center py-10 px-4">
-    <p class="uppercase tracking-widest text-sm text-amber-300 mb-2">By The Numbers</p>
-    <h3 class="text-3xl font-bold mb-10">The One With All The Facts</h3>
+          <!-- PHOEBE BUFFAY -->
+          <li>
+            <article
+              role="article"
+              aria-label="Phoebe Buffay — The Free Spirit"
+              class="character-card bg-white rounded-2xl shadow-md overflow-hidden"
+            >
+              <div class="card-top phoebe" aria-hidden="true"></div>
+              <img
+                src="./public/Phoebe.png"
+                alt="Phoebe Buffay, played by Lisa Kudrow, smiling freely"
+                class="character-img"
+              />
+              <div class="p-4">
+                <p class="text-xs text-amber-500 uppercase tracking-wider">Lisa Kudrow</p>
+                <h3 class="text-xl font-bold text-gray-800 mt-1">Phoebe Buffay</h3>
+                <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Free Spirit</span>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  Quirky, warm, and wonderfully weird. A masseuse and singer-songwriter whose greatest
+                  hit is <em>Smelly Cat</em>. One of a kind — truly.
+                </p>
+              </div>
+            </article>
+          </li>
 
-    <div class="flex flex-wrap justify-center gap-12">
-      <div>
-        <p class="text-5xl font-bold">10</p>
-        <p class="text-amber-300 text-sm mt-1 uppercase tracking-wide">Seasons</p>
-      </div>
-      <div>
-        <p class="text-5xl font-bold">236</p>
-        <p class="text-amber-300 text-sm mt-1 uppercase tracking-wide">Episodes</p>
-      </div>
-      <div>
-        <p class="text-5xl font-bold">52M</p>
-        <p class="text-amber-300 text-sm mt-1 uppercase tracking-wide">Finale Viewers</p>
-      </div>
-      <div>
-        <p class="text-5xl font-bold">6</p>
-        <p class="text-amber-300 text-sm mt-1 uppercase tracking-wide">Best Friends</p>
-      </div>
-      <div>
-        <p class="text-5xl font-bold">∞</p>
-        <p class="text-amber-300 text-sm mt-1 uppercase tracking-wide">Rewatches</p>
-      </div>
-    </div>
-  </section>
+          <!-- ROSS GELLER -->
+          <li>
+            <article
+              role="article"
+              aria-label="Ross Geller — The Paleontologist"
+              class="character-card bg-white rounded-2xl shadow-md overflow-hidden"
+            >
+              <div class="card-top ross" aria-hidden="true"></div>
+              <img
+                src="./public/ross.png"
+                alt="Ross Geller, played by David Schwimmer, holding a phone and smiling"
+                class="character-img"
+              />
+              <div class="p-4">
+                <p class="text-xs text-amber-500 uppercase tracking-wider">David Schwimmer</p>
+                <h3 class="text-xl font-bold text-gray-800 mt-1">Ross Geller</h3>
+                <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Paleontologist</span>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  A hopeless romantic with three divorces and a passion for dinosaurs. He's been in love
+                  with Rachel since high school. And yes — they were on a break.
+                </p>
+              </div>
+            </article>
+          </li>
 
-  <!-- footer -->
-  <footer class="bg-gray-900 text-gray-200 text-center py-8 text-sm">
-    <p>Made with ☕ and love for <strong class="text-amber-300">Friends</strong> — NBC 1994–2004</p>
-    <p class="mt-1 text-xs">Fan site · All characters belong to their respective owners.</p>
-  </footer>
+          <!-- CHANDLER BING -->
+          <li>
+            <article
+              role="article"
+              aria-label="Chandler Bing — The Funny One"
+              class="character-card bg-white rounded-2xl shadow-md overflow-hidden"
+            >
+              <div class="card-top chandler" aria-hidden="true"></div>
+              <img
+                src="./public/Chandler.png"
+                alt="Chandler Bing, played by Matthew Perry, laughing"
+                class="character-img"
+              />
+              <div class="p-4">
+                <p class="text-xs text-amber-500 uppercase tracking-wider">Matthew Perry</p>
+                <h3 class="text-xl font-bold text-gray-800 mt-1">Chandler Bing</h3>
+                <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Funny One</span>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  Sarcasm is his love language. Could this BE a more loveable character? His job is a
+                  mystery to everyone, but his heart is wide open.
+                </p>
+              </div>
+            </article>
+          </li>
 
-</body>
+          <!-- JOEY TRIBBIANI -->
+          <li>
+            <article
+              role="article"
+              aria-label="Joey Tribbiani — The Actor"
+              class="character-card bg-white rounded-2xl shadow-md overflow-hidden"
+            >
+              <div class="card-top joey" aria-hidden="true"></div>
+              <img
+                src="./public/Joey.png"
+                alt="Joey Tribbiani, played by Matt LeBlanc, leaning on a counter with a charming smile"
+                class="character-img"
+              />
+              <div class="p-4">
+                <p class="text-xs text-amber-500 uppercase tracking-wider">Matt LeBlanc</p>
+                <h3 class="text-xl font-bold text-gray-800 mt-1">Joey Tribbiani</h3>
+                <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Actor</span>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  Charming, loveable, and deeply committed to two things: acting and food. He has the
+                  biggest heart in the group — and he does NOT share food.
+                </p>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- facts -->
+      <section
+        id="facts"
+        aria-labelledby="facts-heading"
+        class="bg-amber-700 text-white text-center py-5"
+      >
+        <p class="uppercase tracking-widest text-sm text-amber-300 mb-3" aria-hidden="true">By The Numbers</p>
+        <h2 id="facts-heading" class="text-3xl font-bold mb-10">The One With All The Facts</h2>
+
+        <!-- role="list" for the stats group -->
+        <ul role="list" class="flex flex-wrap justify-center gap-12 list-none p-0">
+
+          <!-- Each stat: aria-label gives full readable meaning, not just "10" -->
+          <li aria-label="10 Seasons">
+            <p class="text-5xl font-bold" aria-hidden="true">10</p>
+            <p class="text-amber-300 text-sm mt-1 uppercase tracking-wide" aria-hidden="true">Seasons</p>
+          </li>
+          <li aria-label="236 Episodes">
+            <p class="text-5xl font-bold" aria-hidden="true">236</p>
+            <p class="text-amber-300 text-sm mt-1 uppercase tracking-wide" aria-hidden="true">Episodes</p>
+          </li>
+          <li aria-label="52 million viewers for the finale">
+            <p class="text-5xl font-bold" aria-hidden="true">52M</p>
+            <p class="text-amber-300 text-sm mt-1 uppercase tracking-wide" aria-hidden="true">Finale Viewers</p>
+          </li>
+          <li aria-label="6 Best Friends">
+            <p class="text-5xl font-bold" aria-hidden="true">6</p>
+            <p class="text-amber-300 text-sm mt-1 uppercase tracking-wide" aria-hidden="true">Best Friends</p>
+          </li>
+          <li aria-label="Infinite rewatches">
+            <p class="text-5xl font-bold" aria-hidden="true">∞</p>
+            <p class="text-amber-300 text-sm mt-1 uppercase tracking-wide" aria-hidden="true">Rewatches</p>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- footer
+         role="contentinfo" is the semantic landmark for footer info about the site.
+         Screen readers use this to navigate to page-level metadata. -->
+    <footer role="contentinfo" class="bg-gray-900 text-gray-200 text-center py-7 text-sm">
+      <p>Made with ☕ and love for <strong class="text-amber-300">Friends</strong> — NBC 1994–2004</p>
+      <p class="mt-2 text-xs">Fan site · All characters belong to their respective owners.</p>
+    </footer>
+
+  </body>
 </html>
