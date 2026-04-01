@@ -51,7 +51,7 @@
       aria-label="Main navigation"
       class="bg-amber-400 p-4 flex justify-between items-center shadow-xl sticky top-0 z-50"
     >
-      <div class="w-32" aria-hidden="true"></div>
+      <div class="w-64" aria-hidden="true"></div>
       <!-- aria-hidden on decorative spacer — screen readers skip it -->
 
       <!-- This is a logo/site title — aria-label clarifies it's the site name -->
@@ -72,6 +72,7 @@
             aria-label="Shop Friends merchandise — opens in new tab"
             class="hover:underline"
           >Shop</a>
+          <li><a href="#seasons" class="hover:underline">Seasons</a>
         </li>
       </ul>
     </nav>
@@ -123,7 +124,7 @@
         role="marquee"
         aria-label="Famous quotes from Friends"
         aria-live="off"
-        class="bg-amber-700 text-amber-200 text-center py-5 px-4 text-lg italic"
+        class="bg-amber-700 text-amber-200 text-center py-5 px-4 text-lg italic rounded-2xl "
       >
         "We were on a break!" — "How you doin'?" — "Oh. My. God." — "Smelly Cat…" —
         "Joey doesn't share food" — "Pivot, Pivot, Pivot" —
@@ -300,7 +301,7 @@
                 <h3 class="text-xl font-bold text-gray-800 mt-1">Joey Tribbiani</h3>
                 <span class="inline-block bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full mt-2 mb-3">The Actor</span>
                 <p class="text-gray-500 text-sm leading-relaxed">
-                  Charming, loveable, and deeply committed to two things: acting and food. He has the
+                  Charming, loveable, and deeply committed to two things: Acting and food. He has the
                   biggest heart in the group — and he does NOT share food.
                 </p>
               </div>
@@ -314,7 +315,7 @@
       <section
         id="facts"
         aria-labelledby="facts-heading"
-        class="bg-amber-700 text-white text-center py-5"
+        class="bg-amber-700 text-white text-center py-4"
       >
         <p class="uppercase tracking-widest text-sm text-amber-300 mb-3" aria-hidden="true">By The Numbers</p>
         <h2 id="facts-heading" class="text-3xl font-bold mb-10">The One With All The Facts</h2>
@@ -346,15 +347,139 @@
         </ul>
       </section>
 
+       <!-- SEASONS TIMELINE -->
+      <section id="seasons" aria-labelledby="seasons-heading" class="max-w-2xl mx-auto py-14 px-4">
+            <p class="text-center text-amber-600 text-lg mb-4" aria-hidden="true">The Journey</p>
+            <h2 id="seasons-heading" class="text-center text-3xl font-bold text-amber-700 mb-10">
+            Ten Seasons of Friends
+            </h2>
+
+          <ol class="relative border-l-4 border-amber-300 list-none p-0 ml-4">
+
+            <li class="mb-8 ml-6">
+        <span class="absolute -left-3 bg-amber-400 text-amber-900 font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center">1</span>
+        <p class="text-xs text-amber-700 uppercase tracking-widest mb-1">1994 – 1995</p>
+        <h3 class="text-base font-bold text-gray-800 mb-1">The One Where It All Begins</h3>
+        <p class="text-sm text-gray-800">Six friends meet at Central Perk, Ross pines for Rachel, and a legendary couch is claimed.</p>
+            </li>
+
+      <li class="mb-8 ml-6">
+        <span class="absolute -left-3 bg-amber-400 text-amber-900 font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center">2</span>
+      <p class="text-xs text-amber-700 uppercase tracking-widest mb-1">1995 – 1996</p>
+      <h3 class="text-base font-bold text-gray-800 mb-1">The One With Ross and Rachel</h3>
+      <p class="text-sm text-gray-800">Ross and Rachel finally get together — and the whole world holds its breath.</p>
+      </li>
+
+      <li class="mb-8 ml-6">
+      <span class="absolute -left-3 bg-amber-400 text-amber-900 font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center">3</span>
+      <p class="text-xs text-amber-700 uppercase tracking-widest mb-1">1996 – 1997</p>
+      <h3 class="text-base font-bold text-gray-800 mb-1">The One With The Break</h3>
+      <p class="text-sm text-gray-800">Ross and Rachel split, Chandler and Janice keep happening, and Joey lands a big role.</p>
+      </li>
+
+      <li class="mb-8 ml-6">
+      <span class="absolute -left-3 bg-amber-400 text-amber-900 font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center">4</span>
+      <p class="text-xs text-amber-700 uppercase tracking-widest mb-1">1997 – 1998</p>
+      <h3 class="text-base font-bold text-gray-800 mb-1">The One In London</h3>
+      <p class="text-sm text-gray-800">Ross gets married (again), and Monica and Chandler share a surprising night in London.</p>
+      </li>
+
+      <li class="mb-8 ml-6">
+      <span class="absolute -left-3 bg-amber-400 text-amber-900 font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center">5</span>
+      <p class="text-xs text-amber-700 uppercase tracking-widest mb-1">1998 – 1999</p>
+      <h3 class="text-base font-bold text-gray-800 mb-1">The One Where Chandler and Monica Get Serious</h3>
+      <p class="text-sm text-gray-800">Monica and Chandler try to keep their relationship secret — and completely fail.</p>
+      </li>
+
+      <li class="mb-8 ml-6">
+      <span class="absolute -left-3 bg-amber-400 text-amber-900 font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center">6</span>
+      <p class="text-xs text-amber-700 uppercase tracking-widest mb-1">1999 – 2000</p>
+      <h3 class="text-base font-bold text-gray-800 mb-1">The One With The Proposal</h3>
+      <p class="text-sm text-gray-800">Chandler proposes to Monica in the most emotional scene of the whole series.</p>
+      </li>
+
+      <li class="mb-8 ml-6">
+      <span class="absolute -left-3 bg-amber-400 text-amber-900 font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center">7</span>
+      <p class="text-xs text-amber-700 uppercase tracking-widest mb-1">2000 – 2001</p>
+      <h3 class="text-base font-bold text-gray-800 mb-1">The One With The Wedding</h3>
+      <p class="text-sm text-gray-800">Monica and Chandler get married — and Phoebe discovers she might be pregnant.</p>
+      </li>
+
+      <li class="mb-8 ml-6">
+      <span class="absolute -left-3 bg-amber-400 text-amber-900 font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center">8</span>
+      <p class="text-xs text-amber-700 uppercase tracking-widest mb-1">2001 – 2002</p>
+      <h3 class="text-base font-bold text-gray-800 mb-1">The One With The Baby</h3>
+      <p class="text-sm text-gray-800">Rachel gives birth to Emma, and everyone wonders who the father is — well, not for long.</p>
+      </li>
+
+      <li class="mb-8 ml-6">
+      <span class="absolute -left-3 bg-amber-400 text-amber-900 font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center">9</span>
+      <p class="text-xs text-amber-700 uppercase tracking-widest mb-1">2002 – 2003</p>
+      <h3 class="text-base font-bold text-gray-800 mb-1">The One In Barbados</h3>
+      <p class="text-sm text-gray-800">Ross chases Rachel to Barbados, and the gang navigates love, jealousy and bad hair in the rain.</p>
+      </li>
+
+      <li class="mb-8 ml-6">
+      <span class="absolute -left-3 bg-amber-400 text-amber-900 font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center">10</span>
+      <p class="text-xs text-amber-700 uppercase tracking-widest mb-1">2003 – 2004</p>
+      <h3 class="text-base font-bold text-gray-800 mb-1">The Last One</h3>
+      <p class="text-sm text-gray-800">Rachel gets off the plane. The keys are left on the counter. 52 million people cry together.</p>
+      </li>
+
+     </ol>
+    </section>
     </main>
 
-    <!-- footer
+    <!-- footer>
          role="contentinfo" is the semantic landmark for footer info about the site.
          Screen readers use this to navigate to page-level metadata. -->
-    <footer role="contentinfo" class="bg-gray-900 text-gray-200 text-center py-7 text-sm">
-      <p>Made with ☕ and love for <strong class="text-amber-300">Friends</strong> — NBC 1994–2004</p>
-      <p class="mt-2 text-xs">Fan site · All characters belong to their respective owners.</p>
-    </footer>
+      <footer role="contentinfo" class="bg-amber-700 text-amber-100 text-center py-10 px-4">
+       <p class="logo-font text-5xl text-white mb-1 pb-3">Friends</p>
+       <p class="text-xs text-amber-100 uppercase tracking-widest mb-6 opacity-80">1994 – 2004 · NBC · New York City</p>
+   
+      
+         <div class="w-12 h-0.5 bg-amber-200 mx-auto mb-6 opacity-50"></div>
+
+          <!-- Social Links -->
+
+       <a href="https://www.instagram.com/friends/?hl=en"
+       target="_blank" rel="noopener noreferrer" aria-label="Instagram — opens in new tab"
+       class="px-5 py-2 border border-amber-100 rounded-full text-xs text-amber-100 uppercase tracking-wider
+       hover:bg-amber-100 hover:text-amber-800 transition-colors">Instagram</a>
+       
+       <a href="www.youtube.com/@Friends"
+       target="_blank" rel="noopener noreferrer" aria-label="youtube — opens in new tab"
+       class="px-8 py-2 border border-amber-100 rounded-full text-xs text-amber-100 uppercase tracking-wider
+       hover:bg-amber-100 hover:text-amber-800 transition-colors">youtube</a>
+    
+       <a href="tiktok.com/@friendstvofficial?lang=en"
+       target="_blank" rel="noopener noreferrer" aria-label="tiktok — opens in new tab"
+       class="px-5 py-2 border border-amber-100 rounded-full text-xs text-amber-100 uppercase tracking-wider
+       hover:bg-amber-100 hover:text-amber-800 transition-colors">tiktok</a>
+
+       <a href="hbomax.com/shows/friends/52dae4c7-2ab1-4bb9-ab1c-8100fd54e2f9"
+       target="_blank" rel="noopener noreferrer" aria-label="hbomax — opens in new tab"
+       class="px-5 py-2 border border-amber-100 rounded-full text-xs text-amber-100 uppercase tracking-wider
+       hover:bg-amber-100 hover:text-amber-800 transition-colors">hbomax</a>
+
+       <a href="facebook.com/friends.tv"
+       target="_blank" rel="noopener noreferrer" aria-label="facebook — opens in new tab"
+       class="px-5 py-2 border border-amber-100 rounded-full text-xs text-amber-100 uppercase tracking-wider
+       hover:bg-amber-100 hover:text-amber-800 transition-colors">facebook</a>
+
+       <a href="https://forms.gle/FKMNzBiC7Sr9dKbo9"
+       target="_blank" rel="noopener noreferrer" aria-label="googleforms — opens in new tab"
+       class="px-5 py-2 border border-amber-100 rounded-full text-xs text-amber-100 uppercase tracking-wider
+       hover:bg-amber-100 hover:text-amber-800 transition-colors">Friends Trivia</a>
+       </div>
+
+       <!-- Bottom text -->
+       <div class=" border-white border-opacity-15 pt-5">
+       <p class="text-sm text-amber-100 pt-2">Made with ☕ and love for <strong class="text-white italic">Friends</strong> — NBC 1994–2004</p>
+       <p class="text-xs text-amber-200 opacity-80 mt-1 tracking-wide pt-3">Fan site · All characters and content belong to their respective owners.</p>
+       </div>
+
+     </footer>
 
   </body>
 </html>

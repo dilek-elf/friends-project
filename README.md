@@ -1,11 +1,11 @@
-📺  Friends TV Show — Fan Landing Page
+📺 **Friends TV Show — Fan Landing Page**
 A clean, responsive fan website dedicated to the Friends TV Show, built with HTML and Tailwind CSS. Created from scratch as part of my web development learning journey — just 3 weeks in! ☕
 
-📸 Preview
+📸 **Preview**
 
 <img width="1875" height="767" alt="image" src="https://github.com/user-attachments/assets/c2618a41-2ff5-47ad-a300-e2fc52c4f9d7" />
 
-✨ ## Features
+✨ **Features**
 
 🧭 Sticky navbar with centered logo and right-side navigation links
 🦸 Hero section with show info and styled badges
@@ -15,14 +15,14 @@ A clean, responsive fan website dedicated to the Friends TV Show, built with HTM
 📊 Facts & numbers section
 📱 Fully responsive — mobile, tablet, and desktop
 
-🛠️  Built With
+🛠️ **Built With**
 
 HTML5 — page structure and content
 Tailwind CSS — utility-first styling (via CDN)
 CSS — minimal custom styles for hover effects, card color bars, and fonts
 Google Fonts — Pacifico font for the Friends logo
 
-📁  Project Structure
+📁 **Project Structure**
 
 friends-website/
 │
@@ -30,7 +30,7 @@ friends-website/
 └── style.css        # Small custom CSS file (hover, image, color bars)
 
 
-🎨 Tailwind Classes Used
+🎨 **Tailwind Classes Used**
 This project uses Tailwind for almost everything — layout, spacing, colors, typography, and responsive design. A full breakdown of every class used is included as a PDF cheat sheet in this repo.
 
 Feature            Tailwind Classes Used
@@ -42,7 +42,7 @@ Dark section       bg-amber-700 text-white
 Card hover         Custom CSS in style.css
 
 
-📚  What I Learned
+📚 **What I Learned**
 
 How to structure a multi-section HTML page
 Using Tailwind CSS utility classes for layout and design
