@@ -1,4 +1,4 @@
-📺 **Friends TV Show — Fan Landing Page**
+📺 **Friends TV Show — Landing Page**
 A clean, responsive fan website dedicated to the Friends TV Show, built with HTML and Tailwind CSS. Created from scratch as part of my web development learning journey — just 3 weeks in! ☕
 
 📸 **Preview**
