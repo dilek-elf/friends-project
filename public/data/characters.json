@@ -1,0 +1,116 @@
+[
+  {
+    "id": "rachel",
+    "name": "Rachel Green",
+    "actor": "Jennifer Aniston",
+    "role": "The Fashionista",
+    "image": "/Rachel.png",
+    "accent": "#d96f2c",
+    "summary": "She starts as a runaway bride and grows into an independent New York woman with a career, courage, and unforgettable style.",
+    "personality": "Warm, stylish, determined, and braver than she first appears.",
+    "facts": [
+      "Starts over in New York after leaving her wedding.",
+      "Builds a real fashion career from the ground up.",
+      "Her confidence grows one choice at a time."
+    ],
+    "quote": {
+      "text": "No uterus, no opinion.",
+      "episode": "Rachel Green"
+    }
+  },
+  {
+    "id": "monica",
+    "name": "Monica Geller",
+    "actor": "Courteney Cox",
+    "role": "The Chef",
+    "image": "/Monica.png",
+    "accent": "#b94a35",
+    "summary": "The heart of the group: a chef, host, loyal friend, and the person most likely to turn a casual evening into a perfectly planned event.",
+    "personality": "Organized, generous, competitive, and deeply loyal.",
+    "facts": [
+      "Her apartment is the group's unofficial home base.",
+      "She turns cooking and hosting into love languages.",
+      "She notices every detail, including the crumbs."
+    ],
+    "quote": {
+      "text": "Welcome to the real world. It sucks. You're gonna love it.",
+      "episode": "Monica Geller"
+    }
+  },
+  {
+    "id": "phoebe",
+    "name": "Phoebe Buffay",
+    "actor": "Lisa Kudrow",
+    "role": "The Free Spirit",
+    "image": "/Phoebe.png",
+    "accent": "#7d5aa6",
+    "summary": "Warm, surprising, and wonderfully original. Phoebe brings music, honesty, and a little mystery into every Central Perk visit.",
+    "personality": "Creative, honest, spiritual, and impossible to predict.",
+    "facts": [
+      "Performs songs at Central Perk with total confidence.",
+      "Says the strange thing everyone else is afraid to say.",
+      "Balances chaos with a surprisingly strong moral compass."
+    ],
+    "quote": {
+      "text": "They don't know that we know they know we know.",
+      "episode": "Phoebe Buffay"
+    }
+  },
+  {
+    "id": "ross",
+    "name": "Ross Geller",
+    "actor": "David Schwimmer",
+    "role": "The Paleontologist",
+    "image": "/ross.png",
+    "accent": "#3d6f8f",
+    "summary": "A romantic dinosaur expert with big feelings, dramatic timing, and one of the show's most quoted relationship debates.",
+    "personality": "Academic, emotional, romantic, and accidentally dramatic.",
+    "facts": [
+      "Works as a paleontologist and professor.",
+      "Can turn furniture moving into a legendary scene.",
+      "Often means well, even when the delivery goes sideways."
+    ],
+    "quote": {
+      "text": "Pivot!",
+      "episode": "Ross Geller"
+    }
+  },
+  {
+    "id": "chandler",
+    "name": "Chandler Bing",
+    "actor": "Matthew Perry",
+    "role": "The Funny One",
+    "image": "/Chandler.png",
+    "accent": "#4f8a5b",
+    "summary": "Sarcasm is his armor, friendship is his language, and his best moments prove that humor can be very soft underneath.",
+    "personality": "Sarcastic, tender, anxious, and quietly dependable.",
+    "facts": [
+      "Uses jokes to survive almost every uncomfortable moment.",
+      "Grows into one of the show's most emotionally open characters.",
+      "Could this be a more quotable friend?"
+    ],
+    "quote": {
+      "text": "I'm not great at the advice. Can I interest you in a sarcastic comment?",
+      "episode": "Chandler Bing"
+    }
+  },
+  {
+    "id": "joey",
+    "name": "Joey Tribbiani",
+    "actor": "Matt LeBlanc",
+    "role": "The Actor",
+    "image": "/Joey.png",
+    "accent": "#c47b2f",
+    "summary": "Charming, loyal, food-focused, and full of heart. Joey brings the easiest laugh and the biggest appetite.",
+    "personality": "Playful, affectionate, optimistic, and very serious about food.",
+    "facts": [
+      "Dreams big as an actor and celebrates every small win.",
+      "Loves his friends with uncomplicated sincerity.",
+      "Has firm boundaries when sandwiches are involved."
+    ],
+    "quote": {
+      "text": "Joey doesn't share food!",
+      "episode": "Joey Tribbiani"
+    }
+  }
+]

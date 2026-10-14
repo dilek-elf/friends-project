@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "quote": "Pivot!",
+    "answer": "Ross Geller",
+    "choices": ["Ross Geller", "Chandler Bing", "Joey Tribbiani"]
+  },
+  {
+    "id": 2,
+    "quote": "Joey doesn't share food!",
+    "answer": "Joey Tribbiani",
+    "choices": ["Monica Geller", "Joey Tribbiani", "Rachel Green"]
+  },
+  {
+    "id": 3,
+    "quote": "Oh. My. God.",
+    "answer": "Janice",
+    "choices": ["Phoebe Buffay", "Janice", "Rachel Green"]
+  },
+  {
+    "id": 4,
+    "quote": "I'm not great at the advice. Can I interest you in a sarcastic comment?",
+    "answer": "Chandler Bing",
+    "choices": ["Chandler Bing", "Ross Geller", "Monica Geller"]
+  },
+  {
+    "id": 5,
+    "quote": "Smelly Cat, Smelly Cat, what are they feeding you?",
+    "answer": "Phoebe Buffay",
+    "choices": ["Phoebe Buffay", "Rachel Green", "Joey Tribbiani"]
+  }
+]

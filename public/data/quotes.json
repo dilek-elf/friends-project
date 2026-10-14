@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "quote": "How you doin'?",
+    "speaker": "Joey Tribbiani"
+  },
+  {
+    "id": 2,
+    "quote": "We were on a break!",
+    "speaker": "Ross Geller"
+  },
+  {
+    "id": 3,
+    "quote": "Welcome to the real world. It sucks. You're gonna love it.",
+    "speaker": "Monica Geller"
+  },
+  {
+    "id": 4,
+    "quote": "Could I be wearing any more clothes?",
+    "speaker": "Joey Tribbiani"
+  },
+  {
+    "id": 5,
+    "quote": "They don't know that we know they know we know.",
+    "speaker": "Phoebe Buffay"
+  }
+]
